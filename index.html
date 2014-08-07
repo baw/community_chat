@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+		<link type="text/css" rel="stylesheet" href="chat.css"/>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		
+		<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+
+		<script src="chat.js"></script>
+		<title>Location Chat</title>
+	</head>
+	<body>
+		<div id='tag'>
+			<p id='namer'>Choose how you would like to appear to your fellow users.</p>
+			<form id='nameGet' name='nameGet' method='get'>
+				<input type='text' id="name" name='title'/>
+				<button id='submitName' type='submit'>Submit</button>
+			</form>
+		</div>
+		<div id='welcome'>Welcome, <span id='namePlaceholder'>[name]</span>. Are you ready to begin?</div>
+		<div id='initiate'>
+			<p id='inText'>INITIATE</p>
+		</div>
+		<div id='chatBox'>
+		<form id='textEntry' name='textEntry'>
+			<input type='text' id="newMessage" name='newMessage'/>
+			<input id='send' type='submit' value='Send'/>
+		</form>
+		<div id="chat"></div>
+		</div>
+		<div id='participants'>
+		<h2>Participants</h2>
+		</div>
+	</body>
+</html>
