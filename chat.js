@@ -57,7 +57,6 @@ var position = function (p) {
 navigator.geolocation.getCurrentPosition(position, null, { enableHighAccuracy: true });
 
 function addUser(data) {
-    console.log('user added');
     var names = data.name();
     var value = data.val();
     if (value !== userName)  { //don't add the current user twice
@@ -66,19 +65,16 @@ function addUser(data) {
 }
 
 function removeUser(data) {
-    console.log('user removed')
     $('.' + data.val()).remove();
 }
 
 function newPost(data) {
-    console.log('new post');
     data = data.val();
     var u, post;
     for (d in data) {
         u = d;
         post = data[d];
     }
-    console.log('u: ' + u + ' post: ' + post );
     addPost(u, post);
 }
 
